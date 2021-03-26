@@ -1,0 +1,115 @@
+*{
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	color: rgb(233, 236, 239);
+}
+body{
+	display: block;
+	background-color: rgb(108, 117, 125); 
+	margin: 0;
+}
+
+.logar{
+	float: left;
+
+	margin-top: 15vh;
+	margin-left: 10vw;
+}
+
+.btnlogin, .btncad, .btnusu {
+	background-color: rgb(33, 37, 41);
+	color: white;
+	font-size: 16px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+	outline: none;
+}
+
+.login { display: block; } 
+.cadastra, .usuarios { display: none; }
+
+.login, .cadastra, .usuarios{
+	position: absolute;
+
+	background-color: rgb(73, 80, 87);
+	padding: 20px;
+	margin-top: 10px;
+	border-radius: 15px;
+}
+
+.login label, .cadastra label{
+	font-size: 18px;
+}
+.login input, .cadastra input{
+	color: black;
+	font-size: 16px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 100px;
+	outline: none;
+}
+.login button, .cadastra button{
+	background-color: rgb(33, 37, 41);
+	color: white;
+	font-size: 16px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+.online{
+	color: green;
+}
+.offline{
+	color: red;
+}
+.usuarios a{
+	font-size: 16px;
+}
+
+
+.right{
+	display: flex;
+	flex-direction: column;
+	float: right;
+
+	width: 50vw;
+	height: 100vh;
+
+	background-color: rgb(73, 80, 87);
+}
+
+.right .body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	padding: 20px;
+}
+.right .body img{
+	width: 300px;
+	height: 300px;
+	border-radius: 100%;
+}
+.right .body h1, .right .body h3{ 
+	margin: 0;
+}
+
+.right .footer{
+	position: fixed;
+
+	width: 100%;
+	height: 15vh;
+	
+	background-color: rgb(33, 37, 41);
+	padding: 10px;
+	bottom: 0;
+}
+.right .footer a{
+	color: white;
+	font-size: 16px;
+}

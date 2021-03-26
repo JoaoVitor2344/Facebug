@@ -1,0 +1,115 @@
+.body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.seila{
+    display: flex;
+    flex-direction: column;
+
+    background-color: grey;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+.principal{
+    display: block;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.publicação{
+    display: flex;
+    flex-direction: column;
+
+    background-color: grey;
+    width: 600px;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+.info-pub{
+    display: flex;
+    flex-direction: row;
+}
+.info-pub img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.info-pub div{
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 10px;
+}
+.info-pub a{
+    color: black;
+    font-size: 18px;
+}
+.publicação .conteudo{
+    display: flex;
+    flex-direction: column;
+
+    font-size: 16px;
+    margin-top: 10px;
+}
+.publicação .conteudo img{
+    width: 600px;
+    border-radius: 15px;
+}
+
+
+.outros{
+    display: block;
+
+    width: 300px;
+}
+.outros button{
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+}
+.outros img{
+    width: 60px;
+    height: 60px;
+}
+.outros a{
+    color: black;
+}
+
+.outros1 { display: flex; }
+.outros2, .outros3 { display: none; }
+.outros1, .outros2, .outros3{
+    flex-direction: column;
+    background-color: grey;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+.outros1 h3, .outros2 h3, .outros3 h3{
+    margin: 0;
+}
+
+.amigos{
+    display: flex;
+    flex-wrap: wrap;
+}
+.amigos div{
+    display: flex;
+    flex-direction: column;
+
+    margin: 10px 10px 0 0;
+}
