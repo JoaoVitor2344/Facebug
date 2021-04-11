@@ -5,8 +5,7 @@
 	}
 	body{
 	 	background-color: rgb(108, 117, 125);  
-		margin: 0px;
-		padding: 0px;
+	 	margin: 0;
 	}
 	.menu{
 		background: rgb(52, 58, 64);

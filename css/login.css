@@ -32,7 +32,6 @@ body{
 
 .login, .cadastra, .usuarios{
 	position: absolute;
-
 	background-color: rgb(73, 80, 87);
 	padding: 20px;
 	margin-top: 10px;
