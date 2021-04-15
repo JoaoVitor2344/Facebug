@@ -22,7 +22,7 @@ include("conecta.php");
 
 // Cria um array dos amigos q tem
 $id = $_SESSION['id'];
-$query = mysqli_query($conn, "SELECT amigos FROM pessoas WHERE id = ".$id);
+$query = mysqli_query($conn, "SELECT amigos FROM usuarios WHERE id = '".$id."'") or die(mysqli_error());
 $dados = mysqli_fetch_assoc($query);
 
 $amigos = $dados['amigos'];
@@ -37,7 +37,7 @@ for ($i=0; $i < strlen($amigos); $i++)
 }
 
 // Cria um array com todas os usuarios
-$query = mysqli_query($conn, "SELECT * FROM pessoas");
+$query = mysqli_query($conn, "SELECT * FROM usuarios");
 while ($usuarios = mysqli_fetch_assoc($query)) 
 {
     $dados2[] = $usuarios['id'];
@@ -52,8 +52,8 @@ foreach ($dados3 as $key)
 {
     if($key != $id)
     {
-        $query2 = mysqli_query($conn, "SELECT * FROM pessoas WHERE id = ".$key);
-        $usuario = mysqli_fetch_assoc($query2);
+        $query = mysqli_query($conn, "SELECT * FROM usuarios WHERE id = '".$id."'");
+        $usuario = mysqli_fetch_assoc($query);
         echo 
         '<div>
             <a href="amigos-add.php?id='.$key.'"><img src="usuarios/foto perfil/'.$key.'.jpg"><a>'.$usuario['nome'].'</a></a>

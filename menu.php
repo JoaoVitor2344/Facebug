@@ -50,19 +50,29 @@
 </style>
 <div class="menu"> 
 	<div class="menu-left">
-		<img class="icone" src="icone.jpg" onclick="window.location.href='principal.php';">
+		<img class="icone" src="icone.jpg" onclick="window.location.href='index.php';">
 		<form method="POST" action="procura.php" autocomplete="on">
 			<input type="text" name="procura" placeholder="Pesquisar">
 		</form>
 	</div>
 	<div class="menu-right">
 		<?php 
-		session_start();
+
+		$url = $_SERVER["REQUEST_URI"];
+
+		if(strstr($url, 'index') == false)
+		{
+		    session_start();
+		}
+
 		echo '
 		<a href="profile.php?id='.$_SESSION['id'].'">
 			<img src="usuarios/foto perfil/'.$_SESSION['id'].'.jpg">
 			<a class="nome">'.$_SESSION['nome'].'</a>
 		</a>';
+
 		?>
+
+		<a href="login.php">Sair</a>
 	</div>
 </div>

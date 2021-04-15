@@ -29,7 +29,7 @@
                 include('conecta.php');
                 
                 $id = $_GET['id'];
-                $query = mysqli_query($conn, "SELECT * FROM pessoas WHERE id = ".$id."");
+                $query = mysqli_query($conn, "SELECT * FROM usuarios WHERE id = ".$id."") or die(mysqli_error());
                 
                 if(mysqli_num_rows($query) > 0)
                 {
@@ -81,6 +81,7 @@
             <div class="nav">
                 <h3>Amigos</h3>
                 <?php 
+
                 $id = $_GET['id']; 
                 $session  = $_SESSION['id'];
 
@@ -88,6 +89,7 @@
                 {
                     echo '<br><a href="amigos-sugestao.php" style="font-size: 18px;">Encontrar amigos</a>';
                 }  
+
                 ?>
             </div>
             <div class="amigos">
@@ -95,7 +97,8 @@
                 include("conecta.php");
 
                 $id = $_GET['id'];
-                $query = mysqli_query($conn, "SELECT amigos FROM pessoas WHERE id = '$id'");
+                $query = mysqli_query($conn, "SELECT amigos FROM usuarios WHERE id = '".$id."'") or die(mysqli_error());
+
                 if(mysqli_num_rows($query) > 0)
                 {
                     $dados = mysqli_fetch_assoc($query);
@@ -110,16 +113,17 @@
 
                     foreach($array as $key)
                     {
-                        $id2 = $key;
-                        $query2 = mysqli_query($conn, "SELECT * FROM pessoas WHERE id = '$id2'");
-                        if(mysqli_num_rows($query2) > 0)
+                        $id = $key;
+                        $query = mysqli_query($conn, "SELECT * FROM usuarios WHERE id = '".$id."'") or die(mysqli_error());
+
+                        if(mysqli_num_rows($query) > 0)
                         {
-                            $dados2 = mysqli_fetch_assoc($query2);
+                            $dados = mysqli_fetch_assoc($query);
                             echo 
                             "<div>
-                                <a href='/facebook2/profile.php?id=".$dados2['id']."'>
-                                    <img src='usuarios/foto perfil/".$dados2['id'].".jpg'>
-                                    <a>".$dados2['nome']."</a>
+                                <a href='/facebook2/profile.php?id=".$dados['id']."'>
+                                    <img src='usuarios/foto perfil/".$dados['id'].".jpg'>
+                                    <a>".$dados['nome']."</a>
                                 </a>
                             </div>";
                         }
@@ -132,8 +136,10 @@
         <div class="principal">
             <?php 
             include("conecta.php");
+
             $id = $_GET['id'];
-            $query = mysqli_query($conn, "SELECT * FROM pessoas WHERE id = '$id'");
+            $query = mysqli_query($conn, "SELECT * FROM usuarios WHERE id = '".$id."'") or die(mysqli_error());
+
             if(mysqli_num_rows($query) > 0)
             {
                 $dados = mysqli_fetch_assoc($query);
@@ -178,7 +184,7 @@
                     {
                         if(date('Y-m-d') == $dados['data'])
                         {
-                            $data = $dados['tempo'];
+                            $data = $dados['hora'];
                         }        
                         else
                         {
