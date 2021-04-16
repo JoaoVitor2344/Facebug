@@ -4,11 +4,11 @@
 		text-decoration: none;
 	}
 	body{
-	 	background-color: rgb(108, 117, 125);  
+	 	background-color: rgb(73, 80, 87);  
 	 	margin: 0;
 	}
 	.menu{
-		background: rgb(52, 58, 64);
+		background: rgb(33, 37, 41);
 		padding: 10px;
 		display: flex;
 		justify-content: space-between;
