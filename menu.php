@@ -8,10 +8,12 @@
 	 	margin: 0;
 	}
 	.menu{
-		background: rgb(33, 37, 41);
-		padding: 10px;
 		display: flex;
 		justify-content: space-between;
+
+		background: rgb(33, 37, 41);
+
+		padding: 10px;
 	}
 	.menu .icone{
 		width: 35px;
@@ -29,16 +31,18 @@
 		cursor: pointer;
 	}
 	.menu-right{
-		margin-right: 0;
 		display: flex;
+		align-items: center;
+
 		cursor: pointer;
+		margin-right: 0;
 	}
 	.menu-right img{
 		width: 35px;
 		height: 35px;
 		border-radius: 100px;
 	}
-	.menu-right .nome{
+	.menu-right .nome, .menu_right a{
 		color: white;
 		padding: 10px;
 	}
@@ -57,22 +61,15 @@
 	</div>
 	<div class="menu-right">
 		<?php 
-
 		$url = $_SERVER["REQUEST_URI"];
-
-		if(strstr($url, 'index') == false)
-		{
-		    session_start();
-		}
+		if($url != "/facebug/index.php") session_start();
 
 		echo '
 		<a href="profile.php?id='.$_SESSION['id'].'">
 			<img src="usuarios/foto perfil/'.$_SESSION['id'].'.jpg">
 			<a class="nome">'.$_SESSION['nome'].'</a>
 		</a>';
-
 		?>
-
 		<a href="login.php">Sair</a>
 	</div>
 </div>
