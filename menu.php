@@ -54,7 +54,7 @@
 </style>
 <div class="menu"> 
 	<div class="menu-left">
-		<img class="icone" src="icone.jpg" onclick="window.location.href='index.php';">
+		<img class="icone" src="icone.jpg" onclick="window.location.href='';">
 		<form method="POST" action="procura.php" autocomplete="on">
 			<input type="text" name="procura" placeholder="Pesquisar">
 		</form>
@@ -62,7 +62,7 @@
 	<div class="menu-right">
 		<?php 
 		$url = $_SERVER["REQUEST_URI"];
-		if($url != "/facebug/index.php") session_start();
+		if($url != "/facebug/index.php" and $url != "/facebug/") session_start();
 
 		echo '
 		<a href="profile.php?id='.$_SESSION['id'].'">

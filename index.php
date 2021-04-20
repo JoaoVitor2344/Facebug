@@ -14,15 +14,13 @@ if(empty($_SESSION['id']))
 <head>
     <meta charset="UTF-8">
     <title>Facebook 2</title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="icone.jpg">
-    <link rel="stylesheet" type="text/css" href="css/principal.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body onload="time()">
     <?php include("menu.php"); ?>
 
     <div class="body">
-        <div class="seila">
+        <div class="seila div">
             <a>Seila</a>
             <div class="conteudo">
                 <?php 
@@ -107,7 +105,7 @@ if(empty($_SESSION['id']))
                             }
 
                             echo'
-                            <div class="publicação"> 
+                            <div class="publicação div"> 
                                     <div class="info-pub">
                                         <img src="usuarios/foto perfil/'.$id.'.jpg"> 
                                         <div>
@@ -147,7 +145,7 @@ if(empty($_SESSION['id']))
             document.getElementById('outros3').style.display = 'flex'; 
             ">Seila</button> 
 
-            <div class="outros1" id="outros1">
+            <div class="outros1 div" id="outros1">
                 <h3>Amigos</h3>
                 <div class="amigos">
                     <?php 
@@ -200,9 +198,9 @@ if(empty($_SESSION['id']))
                 echo '<br><a href="amigos-sugestao.php" style="font-size: 18px;">Encontrar amigos</a>';
                 ?>
             </div>
-            <div class="outros2" id="outros2">
+            <div class="outros2 div" id="outros2">
             </div>
-            <div class="outros3" id="outros3">
+            <div class="outros3 div" id="outros3">
             </div>
         </div>
     </div>

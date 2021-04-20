@@ -3,20 +3,9 @@
 	text-decoration: none;
 	color: rgb(233, 236, 239);
 }
-body{
-	display: block;
-	background-color: rgb(108, 117, 125); 
-	margin: 0;
-}
+body{ background-color: rgb(108, 117, 125); }
 
-.logar{
-	float: left;
-
-	margin-top: 15vh;
-	margin-left: 10vw;
-}
-
-.btnlogin, .btncad, .btnusu {
+.btn{
 	background-color: rgb(33, 37, 41);
 	color: white;
 	font-size: 16px;
@@ -27,21 +16,19 @@ body{
 	outline: none;
 }
 
-.login { display: block; } 
-.cadastra, .usuarios { display: none; }
+.login{ display: block; }
+.cadastra{ display: none; }
+.usuarios{ display: none; }
 
-.login, .cadastra, .usuarios{
+.form{
 	position: absolute;
 	background-color: rgb(73, 80, 87);
 	padding: 20px;
 	margin-top: 10px;
 	border-radius: 15px;
 }
-
-.login label, .cadastra label{
-	font-size: 18px;
-}
-.login input, .cadastra input{
+.form label{ font-size: 18px; }
+.form input{
 	color: black;
 	font-size: 16px;
 	padding: 10px 20px;
@@ -49,7 +36,7 @@ body{
 	border-radius: 100px;
 	outline: none;
 }
-.login button, .cadastra button{
+.form button{
 	background-color: rgb(33, 37, 41);
 	color: white;
 	font-size: 16px;
@@ -59,16 +46,7 @@ body{
 	cursor: pointer;
 }
 
-.online{
-	color: green;
-}
-.offline{
-	color: red;
-}
-.usuarios a{
-	font-size: 16px;
-}
-
+.usuarios a{ font-size: 16px; }
 
 .right{
 	display: flex;
@@ -80,7 +58,6 @@ body{
 
 	background-color: rgb(73, 80, 87);
 }
-
 .right .body{
 	display: flex;
 	flex-direction: column;
@@ -97,7 +74,6 @@ body{
 .right .body h1, .right .body h3{ 
 	margin: 0;
 }
-
 .right .footer{
 	position: fixed;
 
