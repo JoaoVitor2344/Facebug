@@ -9,9 +9,7 @@ $query = mysqli_query($conn, "SELECT * FROM usuarios WHERE email = '$email' and 
 
 if(mysqli_num_rows($query) > 0)
 {
-    echo "<script> 
-    window.location.href = 'index.php';
-    </script>";
+    header("Location:index.php");
 
     $dados = mysqli_fetch_assoc($query);
 
@@ -25,8 +23,6 @@ else
     window.location.href = 'login.php';
     </script>";
 }
-
-$senha = "";
 
 mysqli_close($conn);
 ?>

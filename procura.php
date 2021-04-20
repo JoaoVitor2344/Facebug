@@ -3,49 +3,49 @@
 <head>
 	<title></title>
 	<style type="text/css">
-	a{
-		font-family: Arial, Helvetica, sans-serif;
-		font-size: 16px;
-		color: white;
-	}
-	.body{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	.pessoas{
-		background: rgb(73, 80, 87);
-		width: 600px;
-		padding: 10px;
-		margin: 10px 0 10px 10px;
-		border: none;
-		border-radius: 15px;
-		display: block;
-	}
-	.pessoas button{
-		background: black;
-		cursor: pointer;
-		font-size: 16px;
-		color: white;
-		padding: 10px 20px;
-		border: none;
-		border-radius: 15px;
-	}
-	.info{
-		display: flex;
-		text-align: center;
-	}
-	.info img{
-		width: 60px;
-		height: 60px;
-		border-radius: 100%;
-	}
-	.right{
-		float: right;
-		margin-top: -10%;
-	}
-</style>
+		a{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 16px;
+			color: white;
+		}
+		.body{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.pessoas{
+			background: rgb(73, 80, 87);
+			width: 600px;
+			padding: 10px;
+			margin: 10px 0 10px 10px;
+			border: none;
+			border-radius: 15px;
+			display: block;
+		}
+		.pessoas button{
+			background: black;
+			cursor: pointer;
+			font-size: 16px;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 15px;
+		}
+		.info{
+			display: flex;
+			text-align: center;
+		}
+		.info img{
+			width: 60px;
+			height: 60px;
+			border-radius: 100%;
+		}
+		.right{
+			float: right;
+			margin-top: -10%;
+		}
+	</style>
 </head>
 <body>
 	<?php
@@ -53,7 +53,7 @@
 	include("conecta.php");
 
 	$nome = $_POST['procura'];
-	$query = mysqli_query($conn, "SELECT * FROM pessoas WHERE nome LIKE '$nome%'") or die(mysqli_error($conn));
+	$query = mysqli_query($conn, "SELECT * FROM usuarios WHERE nome LIKE '$nome%'") or die(mysqli_error($conn));
 
 	if(mysqli_num_rows($query) > 0)
 	{
@@ -79,7 +79,7 @@
 	}
 	else
 	{
-		$query = mysqli_query($conn, "SELECT * FROM pessoas WHERE nome LIKE '%$nome%'") or die(mysqli_error($conn));
+		$query = mysqli_query($conn, "SELECT * FROM usuarios WHERE nome LIKE '%$nome%'") or die(mysqli_error($conn));
 
 		if(mysqli_num_rows($query) > 0)
 		{

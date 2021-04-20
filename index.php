@@ -3,9 +3,7 @@ session_start();
 
 if(empty($_SESSION['id']))
 {
-    echo "<script>
-    window.location.href='login.php';
-    </script>";
+    header("Location:login.php");
 }
 ?>
 

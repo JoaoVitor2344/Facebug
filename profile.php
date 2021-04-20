@@ -14,9 +14,7 @@
         <div class="capa">
             <?php 
             $id = $_GET['id'];
-            echo 
-            '<img class="foto-capa" src="usuarios/foto capa/'.$id.'.jpg">
-            <button class="open-button-file" onclick="openFormcapa()"></button>';
+            echo '<img class="foto-capa" src="usuarios/foto capa/'.$id.'.jpg">';
             ?>
         </div>
         <div class="info">
@@ -42,42 +40,9 @@
             </a>
             <a style="font-size: large;">Biografia</a>
         </div>
-        <div class="form-popup-file" id="myForm2">
-            <form method="POST" action="alterar-foto.php?form=perfil" class="form-container-file" enctype="multipart/form-data">
-                <label for="file">Perfil</label>
-                <input type="file" id="file" name="arquivo">
-                <button type="submit" class="btn-file">Alterar</button>
-                <button type="button" class="btn-cancel-file" onclick="closeForminput()">Cancelar</button>
-            </form>
-        </div>
-        <div class="form-popup-file" id="myForm3">
-            <form method="POST" action="alterar-foto.php?form=capa" class="form-container-file" enctype="multipart/form-data">
-                <label for="file">Capa</label>
-                <input type="file" id="file" name="arquivo">
-                <button type="submit" class="btn-file">Alterar</button>
-                <button type="button" class="btn-cancel-file" onclick="closeFormcapa()">Cancelar</button>
-            </form>
-        </div>
-        <script>
-            function openForminput() {
-                document.getElementById("myForm2").style.display = "block";
-            }
-
-            function closeForminput() {
-                document.getElementById("myForm2").style.display = "none";
-            }
-
-            function openFormcapa() {
-                document.getElementById("myForm3").style.display = "block";
-            }
-
-            function closeFormcapa() {
-                document.getElementById("myForm3").style.display = "none";
-            }
-        </script>
     </div>
     <div class="body">
-        <div class="outros">
+        <div class="outros div">
             <div class="nav">
                 <h3>Amigos</h3>
                 <?php 
@@ -121,7 +86,7 @@
                             $dados = mysqli_fetch_assoc($query);
                             echo 
                             "<div>
-                                <a href='/facebook2/profile.php?id=".$dados['id']."'>
+                                <a href='/facebug/profile.php?id=".$dados['id']."'>
                                     <img src='usuarios/foto perfil/".$dados['id'].".jpg'>
                                     <a>".$dados['nome']."</a>
                                 </a>
@@ -147,7 +112,7 @@
                 if($dados['id'] == $_SESSION['id'])
                 {
                     echo 
-                    '<div class="publicar">
+                    '<div class="publicar div">
                         <form  method="POST" action="adicionar-pub.php" target="_self" enctype="multipart/form-data">
                             <label>Publicar</label>
                             <input type="text" name="conteudo" placeholder="Oque vc quer publicar hj?">
@@ -199,7 +164,7 @@
                         $id = $dados['id'];
 
                         echo'
-                        <div class="publicação"> 
+                        <div class="publicação div"> 
                             <div class="pub-bar">
                                 <div class="info-pub">
                                     <img src="usuarios/foto perfil/'.$_GET['id'].'.jpg"> 
