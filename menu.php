@@ -2,6 +2,7 @@
 	*{
 		font-family: Arial, Helvetica, sans-serif;
 		text-decoration: none;
+	    color: rgb(233, 236, 239);
 	}
 	body{
 	 	background-color: rgb(73, 80, 87);  

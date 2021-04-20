@@ -6,9 +6,15 @@ $nome = $_POST["nome"];
 $email = $_POST["email"];
 $senha = sha1($_POST["senha"]);
 
-$query = mysqli_query($conn,"SELECT email FROM usuarios WHERE email = '".$email."'") or die(mysqli_error());
+$query = mysqli_query($conn,"SELECT email FROM usuarios WHERE email = '$email'") or die(mysqli_error());
 
-if(mysqli_num_rows($query) > 0){ echo "<script> alert('Já cadastrado!'); </script>"; }
+if(mysqli_num_rows($query) > 0)
+{ 
+    echo "<script> 
+    alert('Já cadastrado!'); 
+    window.location.href = 'login.php';
+    </script>"; 
+}
 else
 {
     $sql = "INSERT INTO usuarios(nome,email,senha) VALUES('".$nome."','".$email."','".$senha."')";

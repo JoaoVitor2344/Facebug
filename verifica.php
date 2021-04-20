@@ -26,5 +26,7 @@ else
     </script>";
 }
 
+$senha = "";
+
 mysqli_close($conn);
 ?>
