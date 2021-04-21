@@ -91,9 +91,18 @@
 		$url = $_SERVER["REQUEST_URI"];
 		if($url != "/facebug/index.php" and $url != "/facebug/") session_start();
 
+		if(file_exists('usuarios/foto perfil/'.$_SESSION['id'].'.jpg'))
+		{
+			$img = '<img src="usuarios/foto perfil/'.$_SESSION['id'].'.jpg">';
+		}
+		else
+		{
+			$img = '<img src="usuarios/foto perfil/default.jpg">';
+		}
+
 		echo '
 		<a href="profile.php?id='.$_SESSION['id'].'">
-			<img src="usuarios/foto perfil/'.$_SESSION['id'].'.jpg">
+			'.$img.'
 			<a class="nome">'.$_SESSION['nome'].'</a>
 		</a>';
 		

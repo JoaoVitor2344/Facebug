@@ -30,7 +30,16 @@
         <div class="info">
             <?php 
             $id = $_GET['id'];
-            echo '<img class="open-button-file" src="usuarios/foto perfil/'.$id.'.jpg" onclick="openForminput()">'; 
+
+            if(file_exists('usuarios/foto perfil/'.$id.'.jpg'))
+            {
+                echo '<img src="usuarios/foto perfil/'.$id.'.jpg" onclick="openForminput()">'; 
+            }
+            else
+            {
+                echo '<img src="usuarios/foto perfil/default.jpg" onclick="openForminput()">'; 
+            }
+
             ?>
             <a style="font-size: xx-large;">
                 <?php  

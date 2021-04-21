@@ -10,7 +10,7 @@
 .capa{ margin: 5px; }
 .capa img{
 	width: 100%;
-	height: 20%;
+	height: 50vh;
 	border-radius: 15px;
 }
 .capa button{
