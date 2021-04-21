@@ -16,17 +16,17 @@
 		padding: 10px;
 	}
 	.menu .icone{
+		position: absolute;
 		width: 35px;
 		border-radius: 100px;
-		position: absolute;
 	}
 	.menu input{
-		border: none;
-		border-radius: 100px;
+		color: black;
 		font-size: 16px;
 		padding: 10px 15px;
+		border: none;
+		border-radius: 100px;
 		margin-left: 40px;
-		color: black;
 	}
 	.menu-left, .menu-right{
 		cursor: pointer;
