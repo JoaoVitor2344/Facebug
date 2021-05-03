@@ -24,8 +24,7 @@ if(empty($_SESSION['id']))
                 <?php 
                 for ($i=0; $i < 10; $i++) 
                 { 
-                    echo
-                    '<div>
+                    echo '<div>
                         <a>Seila</a>
                     </div>';                    
                 }
@@ -102,8 +101,7 @@ if(empty($_SESSION['id']))
                                 $img = '';
                             }
 
-                            echo'
-                            <div class="publicação div"> 
+                            echo'<div class="publicação div"> 
                                     <div class="info-pub">
                                         <img src="usuarios/foto perfil/'.$id.'.jpg"> 
                                         <div>
@@ -173,14 +171,7 @@ if(empty($_SESSION['id']))
                             {
                                 $dados = mysqli_fetch_assoc($query);
 
-                                // $loggedin = date("i", $dados['loggedin']);
-                                // $loggedtime = date("i") - 2; //2 minutos
-
-                                // if($loggedtime < $loggedin) { $status = "online"; }
-                                // else { $status = "offline"; }
-
-                                echo 
-                                '<div>
+                                echo '<div>
                                     <a href="profile.php?id='.$dados['id'].'">
                                         <img src="usuarios/foto perfil/'.$dados['id'].'.jpg">
                                         <a>'.$dados['nome'].'</a>

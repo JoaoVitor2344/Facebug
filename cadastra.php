@@ -4,16 +4,13 @@ include("conecta.php");
 
 $nome = $_POST["nome"];
 $email = $_POST["email"];
-$senha = sha1($_POST["senha"]);
+$senha = sha1(($_POST["senha"]));
 
 $query = mysqli_query($conn,"SELECT email FROM usuarios WHERE email = '$email'") or die(mysqli_error());
 
 if(mysqli_num_rows($query) > 0)
 { 
-    echo "<script> 
-    alert('Já cadastrado!'); 
-    window.location.href = 'login.php';
-    </script>"; 
+    http_response_code(400); // Já cadastrado
 }
 else
 {
@@ -22,18 +19,9 @@ else
     {
         $_SESSION['nome'] = $nome;
 
-        echo "<script>
-        alert('Cadastro concluido!');
-        window.location.href = 'login.php';
-        </script>";
+        http_response_code(200); // Cadastro concluido
     } 
-    else 
-    {
-        echo "<script>
-        alert('Não foi possivel cadastrar!');
-        window.location.href = 'login.php';
-        </script>";
-    }
+    else http_response_code(500); // Não foi possivel cadastrar
 }
 
 mysqli_close($conn);

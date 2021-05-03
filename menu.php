@@ -68,6 +68,7 @@
 		flex-direction: column;
 
 		background: rgb(52, 58, 64);
+		border: 1px solid black;
 		right: 5px;
 		margin-top: 10px;
 	}
@@ -101,11 +102,9 @@
 		}
 
 		echo '
-		<a href="profile.php?id='.$_SESSION['id'].'">
-			'.$img.'
-			<a class="nome">'.$_SESSION['nome'].'</a>
-		</a>';
-		
+		<a href="profile.php?id='.$_SESSION['id'].'">'.$img.'</a>';
+
+		// <!-- <a class="nome">'.$_SESSION['nome'].'</a> -->
 		?>
 		<div class="menu-dropdown">
 			<div class="menu-btn" onclick="dropdown()">

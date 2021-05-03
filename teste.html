@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>teste</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.div{ display: flex; }
+		.div div{
+			display: flex;
+			flex-direction: column;
+		}
+		.div button{
+			width: 100px;
+			padding: 10px 0;
+			margin-top: 10px;
+		}
+		.div h3{ margin-left: 10px; }
+	</style>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		function enviar()
+		{
+			texto = document.getElementById('text').value;
+
+			$.ajax({
+			    type: "POST",
+			    url: "teste.php",
+			    data: { "texto": texto},
+			    success: function(response){
+			    	document.getElementById('response').innerHTML = response;
+			    }
+		  	});  
+		}
+	</script>
+</head>
+<body>
+	<div class="div">
+		<div>
+			<textarea rows="20" cols="50" id="text"></textarea>
+			<button onclick="enviar();">Traduzir</button>
+		</div>
+		<div>
+			<h3>
+				Numeros de 1 a 9 colocar o 0 antes. Ex: 01 02 <br>
+				Colocar -- para espaços. Ex: 19 -- 02
+			</h3>
+		</div>
+	</div>
+	<h1 id="response"></h1>
+</body>
+</html>

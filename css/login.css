@@ -5,13 +5,6 @@
 }
 body{ background-color: rgb(108, 117, 125); }
 
-.dropdown-btn{
-	
-}
-.dropdown{
-	display: none;
-}
-
 .btn{
 	background-color: rgb(33, 37, 41);
 	color: white;

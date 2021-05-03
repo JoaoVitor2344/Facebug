@@ -103,8 +103,7 @@
                         if(mysqli_num_rows($query) > 0)
                         {
                             $dados = mysqli_fetch_assoc($query);
-                            echo 
-                            "<div>
+                            echo "<div>
                                 <a href='/facebug/profile.php?id=".$dados['id']."'>
                                     <img src='usuarios/foto perfil/".$dados['id'].".jpg'>
                                     <a>".$dados['nome']."</a>
