@@ -15,8 +15,13 @@
 }
 .capa button{
 	position: absolute;
-	padding: 20px;
-	right: 5px;	
+	background-color: black;
+	border: none;
+    width: 60px;
+    height: 60px;
+    right: 5px;
+    top: 333px;
+    cursor: pointer;
 }
 
 .info{

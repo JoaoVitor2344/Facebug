@@ -113,7 +113,7 @@
 				<div></div>
 			</div>
 			<div id="menu-content">
-				<div><a href="logout.php">Sair</a></div>
+				<a href="logout.php"><div>Sair</div></a>
 				<div>teste</div>
 				<div>teste</div>
 			</div>

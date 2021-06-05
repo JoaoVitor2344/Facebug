@@ -10,22 +10,14 @@
 <body>
     <div class="nav-bar">
         <?php include("menu.php"); ?>
-        
         <div class="capa">
             <?php 
-            $id = $_GET['id'];
+                $id = $_GET['id'];
 
-            if(file_exists('usuarios/foto capa/'.$id.'.jpg'))
-            {
-                echo '<img class="foto-capa" src="usuarios/foto capa/'.$id.'.jpg">'; 
-            }
-            else
-            {
-               echo '<img class="foto-capa" src="usuarios/foto capa/default.jpg">'; 
-            }
-
-           
+                if(file_exists('usuarios/foto capa/'.$id.'.jpg')) echo '<img class="foto-capa" src="usuarios/foto capa/'.$id.'.jpg">'; 
+                else echo '<img class="foto-capa" src="usuarios/foto capa/default.jpg">';
             ?>
+            <button>Foto</button>
         </div>
         <div class="info">
             <?php 
