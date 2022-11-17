@@ -29,7 +29,7 @@ else
     $id_img = 0;
 }
 
-$sql = mysqli_query($conn, "INSERT INTO publicações(id_usu,id_img,conteudo,hora,data) VALUES('".$id."','".$id_img."','".$conteudo."','".$time."','".$date."')") or die(mysqli_error($conn));
+$sql = mysqli_query($conn, "INSERT INTO publicacao(id_usu,id_img,conteudo,hora,data) VALUES('".$id."','".$id_img."','".$conteudo."','".$time."','".$date."')") or die(mysqli_error($conn));
 
 echo "<script>
 window.location.href='profile.php?id=".$id."';

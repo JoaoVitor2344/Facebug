@@ -90,7 +90,7 @@
 	<div class="menu-right">
 		<?php 
 		$url = $_SERVER["REQUEST_URI"];
-		if($url != "/facebug/index.php" and $url != "/facebug/") session_start();
+		if($url != "/Facebug/index.php") session_start();
 
 		if(file_exists('usuarios/foto perfil/'.$_SESSION['id'].'.jpg'))
 		{

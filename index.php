@@ -1,10 +1,7 @@
 <?php 
 session_start();
 
-if(empty($_SESSION['id']))
-{
-    header("Location:login.php");
-}
+if(!isset($_SESSION['id'])) header("Location:login.php");
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +51,7 @@ if(empty($_SESSION['id']))
                 { 
                     if($key !== "")
                     {
-                        $query = mysqli_query($conn, "SELECT * FROM publicações WHERE id_usu = ".$key) or die(mysqli_error($conn));
+                        $query = mysqli_query($conn, "SELECT * FROM publicacao WHERE id_usu = ".$key) or die(mysqli_error($conn));
 
                         while ($dados = mysqli_fetch_assoc($query)) 
                         {
@@ -74,7 +71,7 @@ if(empty($_SESSION['id']))
 
                 foreach ($array as $id) 
                 {
-                    $query = mysqli_query($conn, "SELECT * FROM publicações WHERE id_usu = '".$id."'") or die(mysqli_error($conn));
+                    $query = mysqli_query($conn, "SELECT * FROM publicacao WHERE id_usu = '".$id."'") or die(mysqli_error($conn));
                     if(mysqli_num_rows($query) > 0)
                     {
                         $query2 = mysqli_query($conn, "SELECT nome FROM usuarios WHERE id = '".$id."'");

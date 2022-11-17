@@ -152,7 +152,7 @@
                     ';
                 }
 
-                $query = mysqli_query($conn, "SELECT * FROM publicações WHERE id_usu = '$id'") or die(mysqli_error($conn));
+                $query = mysqli_query($conn, "SELECT * FROM publicacao WHERE id_usu = '$id'") or die(mysqli_error($conn));
                 if(mysqli_num_rows($query) > 0)
                 {
                     while ($dados = mysqli_fetch_assoc($query))

@@ -14,11 +14,10 @@ if(mysqli_num_rows($query) > 0)
 }
 else
 {
-    $sql = "INSERT INTO usuarios(nome,email,senha) VALUES('".$nome."','".$email."','".$senha."')";
+    $sql = "INSERT INTO usuarios(nome,email,senha) VALUES('$nome','$email','$senha')";
     if(mysqli_query($conn, $sql))
     {
         $_SESSION['nome'] = $nome;
-
         http_response_code(200); // Cadastro concluido
     } 
     else http_response_code(500); // Não foi possivel cadastrar
